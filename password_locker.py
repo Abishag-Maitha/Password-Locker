@@ -99,7 +99,7 @@ def main():
 						while True:
 							print(' ')
 							print("-"*60)
-							print('Do you want to neter existing password or generate a new one? \n ep-enter existing password \n gp-generate a password \n ex-exit')
+							print('Do you want to enter existing password or generate a new one? \n ep-enter existing password \n gp-generate a password \n ex-exit')
 							psw_choice = input('Enter an option: ').lower().strip()
 							print("-"*60)
 							if psw_choice == 'ep':
