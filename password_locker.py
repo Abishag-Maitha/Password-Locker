@@ -4,7 +4,6 @@ from user_credentials import User, Credential
 def create_user(f_name,l_name,password):
 	
 	#Function to create a new user account
-	
 	new_user = User(f_name,l_name,password)
 	return new_user
 
