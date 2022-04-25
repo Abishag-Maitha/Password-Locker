@@ -38,12 +38,12 @@ class TestCredentials(unittest.TestCase):
 	    # unittest.TestCase: helps in creating test cases
 	
 	def test_check_user(self):
-		'''
-		Function to test whether the login in function check_user works as expected
-		'''
-		self.new_user = User('Mary','Ng\'ang\'a','pswd100')
+		
+		# Function to test whether the login in function check_user works as expected
+		
+		self.new_user = User('Abishag','Maitha','pendomaitha')
 		self.new_user.save_user()
-		user2 = User('Ken','Ng\'ang\'a','pswd100')
+		user2 = User('Tz','Maitha','pendomaitha')
 		user2.save_user()
 
 		for user in User.users_list:
@@ -54,15 +54,15 @@ class TestCredentials(unittest.TestCase):
 		self.assertEqual(current_user,Credential.check_user(user2.password,user2.first_name))
 
 	def setUp(self):
-		'''
-		Function to create an account's credentials before each test
-		'''
-		self.new_credential = Credential('Mary','Facebook','maryjoe','pswd100')
+		
+		# Function to create an account's credentials before each test
+		
+		self.new_credential = Credential('Pendo','Instagram','pendo_maitha','pendomaitha')
 
 	def test__init__(self):
-		'''
-		Test to if check the initialization/creation of credential instances is properly done
-		'''
+		
+		# Test to if check the initialization/creation of credential instances is properly done
+		
 		self.assertEqual(self.new_credential.user_name,'Mary')
 		self.assertEqual(self.new_credential.site_name,'Facebook')
 		self.assertEqual(self.new_credential.account_name,'maryjoe')
@@ -77,14 +77,7 @@ class TestCredentials(unittest.TestCase):
 		twitter.save_credentials()
 		self.assertEqual(len(Credential.credentials_list),2)
 
-	# def test_generate_password(self):
-	# 	'''
-	# 	Test to check if the generate password generates 8 character long alphanumeric numbers
-	# 	'''
-	# 	self.twitter = Credential('Twitter','maryjoe','')
-	# 	self.twitter.password = generate_password()
-	# 	self.assertEqual()
-
+	
 	def tearDown(self):
 		'''
 		Function to clear the credentials list after every test
