@@ -11,14 +11,12 @@ def create_user(f_name,l_name,password):
 def save_user(user):
 	
 	#Function to save a new user account
-	
 	User.save_user(user)
 
-
 def verify_user(first_name,password):
-	'''
-	Function that verifies the existance of the user before creating credentials
-	'''
+	
+	# Function that verifies the existance of the user before creating credentials
+	
 	checking_user = Credential.check_user(first_name,password)
 	return checking_user
 
