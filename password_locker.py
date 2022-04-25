@@ -70,7 +70,7 @@ def main():
 			password = input('Enter your password - ').strip()
 			save_user(create_user(first_name,last_name,password))
 			print(" ")
-			print(f'New Account Created for: {first_name} {last_name} using password: {password}')
+			print(f'Account Successifully Created for: {first_name} {last_name} using password: {password}')
 		elif short_code == 'li':
 			print("-"*60)
 			print(' ')
@@ -85,7 +85,7 @@ def main():
 				while True:
 					print("-"*60)
 					print('Navigation codes: \n cc-Create a Credential \n dc-Display Credentials \n copy-Copy Password \n ex-Exit')
-					short_code = input('Enter a choice: ').lower().strip()
+					short_code = input('Enter navigation code: ').lower().strip()
 					print("-"*60)
 					if short_code == 'ex':
 						print(" ")
