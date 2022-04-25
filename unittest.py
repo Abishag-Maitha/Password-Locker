@@ -2,44 +2,34 @@ import unittest
 # import pyperclip
 from user_credentials import User, Credential
 
+# Test class that defines test cases for the user class behaviours.
 class TestUser(unittest.TestCase):
 	
-	# Test class that defines test cases for the user class behaviours.
-
-	# Args:
-	#     unittest.TestCase: helps in creating test cases
+		# Args: unittest.TestCase: helps in creating test cases
 	
+	# Function to create a user account before each test
 	def setUp(self):
-		
-		# Function to create a user account before each test
 		
 		self.new_user = User('Abishag','Maitha','pendomaitha')
 
+	# Test to if check the initialization/creation of user instances is properly done
 	def test__init__(self):
 	
-		# Test to if check the initialization/creation of user instances is properly done
-		
 		self.assertEqual(self.new_user.first_name,'Abishag')
 		self.assertEqual(self.new_user.last_name,'Maitha')
 		self.assertEqual(self.new_user.password,'pendomaitha')
 
 	def test_save_user(self):
 		
-		# Test to check if the new users info is saved into the users list
-		
 		self.new_user.save_user()
 		self.assertEqual(len(User.users_list),1)
 
+# Test class that defines test cases for the credentials class behaviours.
 class TestCredentials(unittest.TestCase):
 	
-	# Test class that defines test cases for the credentials class behaviours.
-
-	# Args:
-	    # unittest.TestCase: helps in creating test cases
+	# Args: unittest.TestCase: helps in creating test cases
 	
 	def test_check_user(self):
-		
-		# Function to test whether the login in function check_user works as expected
 		
 		self.new_user = User('Abishag','Maitha','pendomaitha')
 		self.new_user.save_user()
@@ -53,15 +43,13 @@ class TestCredentials(unittest.TestCase):
 
 		self.assertEqual(current_user,Credential.check_user(user2.password,user2.first_name))
 
+	# Function to create an account's credentials before each test
 	def setUp(self):
-		
-		# Function to create an account's credentials before each test
 		
 		self.new_credential = Credential('Pendo','Instagram','pendo_maitha','pendomaitha')
 
+	# Test to if check the initialization/creation of credential instances is properly done
 	def test__init__(self):
-		
-		# Test to if check the initialization/creation of credential instances is properly done
 		
 		self.assertEqual(self.new_credential.user_name,'Pendo')
 		self.assertEqual(self.new_credential.site_name,'Instagram')
@@ -70,24 +58,19 @@ class TestCredentials(unittest.TestCase):
 
 	def test_save_credentials(self):
 		
-		# Test to check if the new credential info is saved into the credentials list
-		
 		self.new_credential.save_credentials()
 		twitter = Credential('Abishag','Twitter','abishag_pendo','pendomaitha')
 		twitter.save_credentials()
 		self.assertEqual(len(Credential.credentials_list),2)
 
-	
+	# Function to clear the credentials list after every test
 	def tearDown(self):
-		
-		# Function to clear the credentials list after every test
 		
 		Credential.credentials_list = []
 		User.users_list = []
 
+	# Test to check if the display_credentials method, displays the correct credentials.
 	def test_display_credentials(self):
-		
-		# Test to check if the display_credentials method, displays the correct credentials.
 		
 		self.new_credential.save_credentials()
 		twitter = Credential('Abishag','Twitter','abishag_pendo','pendomaitha')
