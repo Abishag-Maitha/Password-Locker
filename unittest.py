@@ -63,14 +63,14 @@ class TestCredentials(unittest.TestCase):
 		
 		# Test to if check the initialization/creation of credential instances is properly done
 		
-		self.assertEqual(self.new_credential.user_name,'Mary')
-		self.assertEqual(self.new_credential.site_name,'Facebook')
-		self.assertEqual(self.new_credential.account_name,'maryjoe')
-		self.assertEqual(self.new_credential.password,'pswd100')
+		self.assertEqual(self.new_credential.user_name,'Pendo')
+		self.assertEqual(self.new_credential.site_name,'Instagram')
+		self.assertEqual(self.new_credential.account_name,'pendo_maitha')
+		self.assertEqual(self.new_credential.password,'pendomaitha')
 
 	def test_save_credentials(self):
-		'''
-		Test to check if the new credential info is saved into the credentials list
+		
+		# Test to check if the new credential info is saved into the credentials list
 		'''
 		self.new_credential.save_credentials()
 		twitter = Credential('Jane','Twitter','maryjoe','pswd100')
