@@ -13,7 +13,7 @@ class TestUser(unittest.TestCase):
 		
 		# Function to create a user account before each test
 		
-		self.new_user = User('Mary','Ng\'ang\'a','pswd100')
+		self.new_user = User('Abishag','Maitha','pendomaitha')
 
 	def test__init__(self):
 		'''
