@@ -45,14 +45,14 @@ def display_credentials(user_name):
 	return Credential.display_credentials(user_name)
 	
 def copy_credential(site_name):
-	'''
-	Function to copy a credentials details to the clipboard
-	'''
+	
+	# Function to copy a credentials details to the clipboard
+	
 	return Credential.copy_credential(site_name)
 
 def main():
 	print(' ')
-	print('Hello! Welcome to Password Locker.')
+	print('Hey! This is your Password Locker App!!')
 	while True:
 		print(' ')
 		print("-"*60)
