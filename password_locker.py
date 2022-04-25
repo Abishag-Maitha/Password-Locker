@@ -89,7 +89,7 @@ def main():
 					print("-"*60)
 					if short_code == 'ex':
 						print(" ")
-						print(f'Goodbye {user_name}')
+						print(f'Goodbye {user_name}.')
 						break
 					elif short_code == 'cc':
 						print(' ')
