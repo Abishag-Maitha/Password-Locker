@@ -135,16 +135,16 @@ def main():
 						copy_credential(chosen_site)
 						print('')
 					else:
-						print('Oops! Wrong option entered. Try again.')
+						print('Wrong option entered. Try again.')
 
 			else: 
 				print(' ')
-				print('Oops! Wrong details entered. Try again or Create an Account.')		
+				print('Wrong details entered. Try again or Create an Account.')		
 		
 		else:
 			print("-"*60)
 			print(' ')
-			print('Oops! Wrong option entered. Try again.')
+			print('Wrong option entered. Try again.')
 			
 
 if __name__ == '__main__':
