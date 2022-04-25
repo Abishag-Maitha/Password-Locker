@@ -16,12 +16,12 @@ class TestUser(unittest.TestCase):
 		self.new_user = User('Abishag','Maitha','pendomaitha')
 
 	def test__init__(self):
-		'''
-		Test to if check the initialization/creation of user instances is properly done
-		'''
-		self.assertEqual(self.new_user.first_name,'Mary')
-		self.assertEqual(self.new_user.last_name,'Ng\'ang\'a')
-		self.assertEqual(self.new_user.password,'pswd100')
+	
+		# Test to if check the initialization/creation of user instances is properly done
+		
+		self.assertEqual(self.new_user.first_name,'Abishag')
+		self.assertEqual(self.new_user.last_name,'Maitha')
+		self.assertEqual(self.new_user.password,'pendomaitha')
 
 	def test_save_user(self):
 		'''
