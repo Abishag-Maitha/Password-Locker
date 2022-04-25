@@ -11,7 +11,7 @@ class User:
 	# Class Variables
 	# global users_list
 	users_list = []
-	
+
 	# Method to define the properties for each user object will hold
 	def __init__(self,first_name,last_name,password):
 		
@@ -26,17 +26,17 @@ class User:
 		User.users_list.append(self)
 		
 class Credential:
-	'''
-	Class to create  account credentials, generate passwords and save their information
-	'''
+	
+	#Class to create  account credentials, generate passwords and save their information
+	
 	# Class Variables
 	credentials_list =[]
 	user_credentials_list = []
 	@classmethod
 	def check_user(cls,first_name,password):
-		'''
-		Method that checks if the name and password entered match entries in the users_list
-		'''
+		
+		# Method that checks if the name and password entered match entries in the users_list
+		
 		current_user = ''
 		for user in User.users_list:
 			if (user.first_name == first_name and user.password == password):
@@ -90,8 +90,8 @@ class Credential:
 
 	@classmethod
 	def copy_credential(cls,site_name):
-		'''
-		Class method that copies a credential's info after the credential's site name is entered
-		'''
+		
+		# Class method that copies a credential's info after the credential's site name is entered
+		
 		find_credential = Credential.find_by_site_name(site_name)
 		return pyperclip.copy(find_credential.password)
